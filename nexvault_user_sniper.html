@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#090b13"><title>NEXVAULT USER SNIPER</title>
+<style>
+:root{color-scheme:dark;--bg:#090b13;--panel:#121624;--line:#252c40;--text:#f4f6ff;--muted:#9aa4bc;--accent:#7c5cff;--green:#42d392}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at top,#1b1740 0,#090b13 55%);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Tahoma,Arial,sans-serif;min-height:100vh}
+.wrap{max-width:900px;margin:auto;padding:22px 15px 48px}.brand{display:flex;align-items:center;gap:12px;margin:8px 0 24px}.logo{width:48px;height:48px;border-radius:15px;background:linear-gradient(135deg,#7c5cff,#23c7d9);display:grid;place-items:center;font-size:24px;font-weight:900;box-shadow:0 8px 28px #7c5cff44}.brand h1{font-size:20px;margin:0;letter-spacing:.5px}.brand p{margin:5px 0 0;color:var(--muted);font-size:12px}.hero,.panel{background:#121624eF;border:1px solid var(--line);border-radius:20px;padding:18px;margin-bottom:14px;box-shadow:0 12px 35px #0002}.hero h2{font-size:24px;margin:0 0 8px}.hero p,.hint{color:var(--muted);font-size:13px;line-height:1.7;margin:0}.controls{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:17px}label{font-size:12px;color:#c6cce0;display:block;margin-bottom:7px}select,input,button{font:inherit}select,input{width:100%;background:#0c101b;border:1px solid #303951;color:var(--text);border-radius:12px;padding:12px;outline:none}button{border:0;border-radius:12px;padding:12px 14px;cursor:pointer;font-weight:750;transition:transform .12s,opacity .12s}button:active{transform:scale(.98)}.primary{background:linear-gradient(100deg,#795bff,#4c83ff);color:white}.secondary{background:#222a3e;color:#f0f2ff;border:1px solid #343d57}.actions{display:flex;gap:9px;margin-top:13px}.actions button{flex:1}.status{margin-top:12px;font-size:12px;color:var(--muted);min-height:18px}.topline{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:12px}.topline h3{margin:0;font-size:16px}.count{font-size:12px;color:var(--muted)}.results{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.item{border:1px solid #293148;background:#0d111d;border-radius:14px;padding:12px;min-width:0}.username{font-size:20px;font-weight:850;letter-spacing:1px;direction:ltr;text-align:left;overflow-wrap:anywhere}.itemfoot{display:flex;align-items:center;justify-content:space-between;gap:6px;margin-top:12px}.pill{font-size:11px;border-radius:20px;padding:5px 8px;background:#252c40;color:#c4cce0}.pill.ok{background:#123528;color:#69e5ae}.pill.no{background:#39212a;color:#ff9bab}.mini{padding:7px 9px;border-radius:9px;font-size:12px}.star{background:transparent;color:#ffcf65;padding:5px;font-size:20px}.empty{grid-column:1/-1;padding:26px;text-align:center;color:var(--muted);border:1px dashed #343d57;border-radius:14px}.notice{font-size:12px;color:var(--muted);line-height:1.8;margin-top:13px}.notice a{color:#a99aff}.tabs{display:flex;gap:8px;margin-bottom:12px}.tabs button{flex:1}.tabs .active{background:#33266b;border:1px solid #6551b7;color:white}.footer{text-align:center;color:#68728b;font-size:11px;margin-top:24px}@media(max-width:480px){.wrap{padding:15px 12px 35px}.hero h2{font-size:21px}.controls{grid-template-columns:1fr 1fr}.results{grid-template-columns:1fr}.item{display:flex;align-items:center;justify-content:space-between;gap:10px}.itemmain{min-width:0}.itemfoot{margin-top:0;flex-shrink:0}.username{font-size:18px}.itemfoot .pill{display:none}.actions{flex-direction:column}.brand h1{font-size:18px}}
+</style>
+</head>
+<body>
+<main class="wrap">
+<header class="brand"><div class="logo">N</div><div><h1>NEXVAULT <span style="color:#9b8aff">USER SNIPER</span></h1><p>مولّد يوزرات Roblox القصيرة</p></div></header>
+<section class="hero">
+<h2>اصطد اسمك القادم 🎯</h2><p>ولّد أسماء من 3 إلى 5 أحرف، انسخها واحفظ المفضلة. فحص التوفر يستخدم نقطة النهاية العامة المتاحة من Roblox وقد يتأثر بالحدود أو تغييرات الخدمة.</p>
+<div class="controls">
+<div><label for="length">طول اليوزر</label><select id="length"><option value="3">3 أحرف</option><option value="4">4 أحرف</option><option value="5">5 أحرف</option><option value="3-5" selected>متنوع (3–5)</option></select></div>
+<div><label for="style">نمط الأسماء</label><select id="style"><option value="mixed">نادر / عشوائي</option><option value="letters">حروف فقط</option><option value="digits">حروف وأرقام</option><option value="clean">سهل القراءة</option></select></div>
+</div>
+<div class="actions"><button class="primary" id="generate">✦ ولّد يوزرات</button><button class="secondary" id="checkAll">✓ افحص الظاهر</button></div>
+<div class="status" id="status" aria-live="polite">جاهز — اضغط «ولّد يوزرات» للبدء.</div>
+</section>
+<section class="panel">
+<div class="topline"><h3 id="listTitle">الاقتراحات</h3><span class="count" id="count">0 اسم</span></div>
+<div class="tabs"><button class="secondary active" id="allTab">الكل</button><button class="secondary" id="favTab">★ المفضلة</button></div>
+<div class="results" id="results"><div class="empty">اضغط زر التوليد لعرض اقتراحاتك هنا.</div></div>
+<p class="notice">تنبيه: ظهور الاسم كمتاح لا يضمن إمكانية تسجيله؛ قد يكون محجوزًا أو غير صالح وفق قواعد Roblox. لا تدخل كلمة مرورك أو ملفات تعريف الارتباط في أي أداة خارجية.</p>
+</section>
+<div class="footer">NEXVAULT USER SNIPER · أداة مستقلة غير تابعة رسميًا لـ Roblox</div>
+</main>
+<script>
+const $=id=>document.getElementById(id);
+let names=[], favorites=new Set(), activeTab='all', busy=false;
+const letters='abcdefghijklmnopqrstuvwxyz', alnum='abcdefghijklmnopqrstuvwxyz0123456789';
+const cleanParts=['vex','nox','kai','zen','rix','lyx','neo','zor','kyo','rax','ivy','ash','ryn','xel'];
+function pick(s){return s[Math.floor(Math.random()*s.length)]}
+function makeName(){
+ const mode=$('length').value, len=mode==='3-5'?[3,4,5][Math.floor(Math.random()*3)]:Number(mode), style=$('style').value;
+ let s='';
+ if(style==='clean' && len>=4){const a=pick(cleanParts);s=(a+Array.from({length:Math.max(0,len-a.length)},()=>pick(letters)).join('')).slice(0,len)}
+ else {const pool=style==='letters'?letters:alnum;for(let i=0;i<len;i++)s+=pick(pool)}
+ return s;
+}
+function render(){
+ const shown=activeTab==='fav'?names.filter(n=>favorites.has(n)):names;
+ $('listTitle').textContent=activeTab==='fav'?'المفضلة':'الاقتراحات';
+ $('count').textContent=shown.length+' اسم';
+ const root=$('results');root.innerHTML='';
+ if(!shown.length){root.innerHTML='<div class="empty">'+(activeTab==='fav'?'ما حفظت أي يوزر للحين. اضغط ☆ لحفظ اللي يعجبك.':'ما فيه اقتراحات بعد — ولّد مجموعة جديدة.')+'</div>';return}
+ shown.forEach(n=>{
+  const state=names.find(x=>x===n);
+  const el=document.createElement('article');el.className='item';
+  const main=document.createElement('div');main.className='itemmain';
+  const name=document.createElement('div');name.className='username';name.textContent=n;
+  const badge=document.createElement('span');badge.className='pill';badge.textContent=n.length+' أحرف';
+  main.append(name,badge);
+  const foot=document.createElement('div');foot.className='itemfoot';
+  const status=document.createElement('span');status.className='pill '+(state.check==='available'?'ok':state.check==='taken'?'no':'');status.textContent=state.check==='available'?'متاح مبدئيًا':state.check==='taken'?'غير متاح':state.check==='error'?'تعذر الفحص':'غير مفحوص';
+  const copy=document.createElement('button');copy.className='secondary mini';copy.textContent='نسخ';copy.onclick=async()=>{try{await navigator.clipboard.writeText(n);$('status').textContent='تم نسخ '+n;}catch(e){fallbackCopy(n)}};
+  const fav=document.createElement('button');fav.className='star';fav.textContent=favorites.has(n)?'★':'☆';fav.setAttribute('aria-label','تبديل المفضلة');fav.onclick=()=>{favorites.has(n)?favorites.delete(n):favorites.add(n);render()};
+  foot.append(status,copy,fav);el.append(main,foot);root.append(el);
+ });
+}
+function fallbackCopy(s){const t=document.createElement('textarea');t.value=s;document.body.append(t);t.select();try{document.execCommand('copy');$('status').textContent='تم نسخ '+s;}catch(e){$('status').textContent='تعذر النسخ تلقائيًا؛ حدّد الاسم وانسخه يدويًا.'}t.remove()}
+const nameState=new Map();
+$('generate').onclick=()=>{
+ const set=new Set();let tries=0;
+ while(set.size<24 && tries<1500){set.add(makeName());tries++}
+ names=[...set];
+ names.forEach(n=>nameState.set(n,{check:''}));
+ activeTab='all';$('allTab').classList.add('active');$('favTab').classList.remove('active');render();
+ $('status').textContent='تم توليد '+names.length+' اقتراحًا. افحصها لمعرفة التوفر المبدئي.';
+};
+function render(){
+ const shown=activeTab==='fav'?names.filter(n=>favorites.has(n)):names;
+ $('listTitle').textContent=activeTab==='fav'?'المفضلة':'الاقتراحات';$('count').textContent=shown.length+' اسم';
+ const root=$('results');root.innerHTML='';
+ if(!shown.length){root.innerHTML='<div class="empty">'+(activeTab==='fav'?'ما حفظت أي يوزر للحين. اضغط ☆ لحفظ اللي يعجبك.':'اضغط زر التوليد لعرض اقتراحاتك هنا.')+'</div>';return}
+ shown.forEach(n=>{const st=nameState.get(n)||{check:''};const el=document.createElement('article');el.className='item';const main=document.createElement('div');main.className='itemmain';const name=document.createElement('div');name.className='username';name.textContent=n;const badge=document.createElement('span');badge.className='pill';badge.textContent=n.length+' أحرف';main.append(name,badge);const foot=document.createElement('div');foot.className='itemfoot';const status=document.createElement('span');status.className='pill '+(st.check==='available'?'ok':st.check==='taken'?'no':'');status.textContent=st.check==='available'?'متاح مبدئيًا':st.check==='taken'?'غير متاح':st.check==='error'?'تعذر الفحص':'غير مفحوص';const copy=document.createElement('button');copy.className='secondary mini';copy.textContent='نسخ';copy.onclick=async()=>{try{await navigator.clipboard.writeText(n);$('status').textContent='تم نسخ '+n;}catch(e){fallbackCopy(n)}};const fav=document.createElement('button');fav.className='star';fav.textContent=favorites.has(n)?'★':'☆';fav.setAttribute('aria-label','تبديل المفضلة');fav.onclick=()=>{favorites.has(n)?favorites.delete(n):favorites.add(n);render()};foot.append(status,copy,fav);el.append(main,foot);root.append(el)});
+}
+async function checkName(n){
+ // Roblox's public username validation endpoint; no credentials or bypassing.
+ const url='https://users.roblox.com/v1/usernames/validate?username='+encodeURIComponent(n)+'&birthday=2000-01-01';
+ try{const r=await fetch(url);if(!r.ok)throw Error('HTTP '+r.status);const d=await r.json();
+ // Roblox validation code 0 is valid; other codes may indicate taken or invalid, so label conservatively.
+ if(d.code===0)return 'available';
+ if(d.code===1)return 'taken';
+ return 'error';
+ }catch(e){return 'error'}
+}
+$('checkAll').onclick=async()=>{
+ if(busy)return;if(!names.length){$('status').textContent='ولّد يوزرات أولًا.';return}
+ busy=true;$('checkAll').disabled=true;let done=0;const total=names.length;
+ for(const n of names){const result=await checkName(n);nameState.set(n,{check:result});done++;$('status').textContent='جاري الفحص: '+done+'/'+total;render();await new Promise(r=>setTimeout(r,350))}
+ $('status').textContent='انتهى الفحص. «متاح مبدئيًا» يعني أن واجهة Roblox قبلت الاسم وقت الفحص فقط.';$('checkAll').disabled=false;busy=false;render();
+};
+$('allTab').onclick=()=>{activeTab='all';$('allTab').classList.add('active');$('favTab').classList.remove('active');render()};
+$('favTab').onclick=()=>{activeTab='fav';$('favTab').classList.add('active');$('allTab').classList.remove('active');render()};
+</script>
+</body></html>
